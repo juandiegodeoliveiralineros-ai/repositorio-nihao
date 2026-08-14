@@ -1,0 +1,139 @@
+/* Reset inicial de margenes y bordes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo de pantalla y centrado completo */
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #121216;
+  color: #f0f0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Tarjeta principal */
+.card {
+  background-color: #1e1e24;
+  border: 1px solid #2e2e38;
+  border-top: 4px solid #800020;
+  border-radius: 18px;
+  padding: 32px 28px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Texto de instruccion */
+.subtitle {
+  font-size: 0.95rem;
+  color: #b0b0c0;
+  margin-bottom: 16px;
+}
+
+/* Boton de regalo */
+.gift-btn {
+  background-color: #800020;
+  border: none;
+  font-size: 2.2rem;
+  padding: 12px 22px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(128, 0, 32, 0.4);
+  margin-bottom: 22px;
+}
+
+.gift-btn:hover {
+  transform: scale(1.12) rotate(6deg);
+  background-color: #a00028;
+  box-shadow: 0 6px 20px rgba(160, 0, 40, 0.6);
+}
+
+/* Titulo principal */
+h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+/* Frase */
+.phrase {
+  font-size: 1rem;
+  color: #d1d1e0;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Contenedor del GIF */
+.gif-container {
+  margin: 18px 0;
+}
+
+.gif-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #333342;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Seccion inferior */
+.footer-text {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #2e2e38;
+  color: #8a8a9e;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 500;
+}
+
+/* Estilo para el mensaje sorpresa de JS */
+.surprise-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #2a2a35;
+  border-radius: 12px;
+  border: 1px dashed #800020;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.surprise-box h3 {
+  color: #ff4d6d;
+  margin-bottom: 5px;
+}
+
+/* Animaciones de emojis flotantes */
+.floating-emoji {
+  position: fixed;
+  font-size: 2rem;
+  pointer-events: none;
+  animation: floatUp 2s forwards ease-out;
+  z-index: 999;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-300px) scale(1.5);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
